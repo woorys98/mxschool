@@ -1,0 +1,258 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="책장마켓 - 따뜻한 동네 중고서적 책방">
+  <title>책장마켓</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background: #f5efe5;
+      color: #4a382c;
+      font-family:
+        "Noto Sans KR",
+        "Apple SD Gothic Neo",
+        "Malgun Gothic",
+        sans-serif;
+      line-height: 1.8;
+    }
+
+    .page {
+      width: 100%;
+      min-height: 100vh;
+      padding: 70px 24px 50px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 900px;
+      margin: 0 auto;
+    }
+
+    .title-area {
+      text-align: center;
+      margin-bottom: 42px;
+    }
+
+    .title {
+      margin: 0;
+      color: #5b3e2d;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(3.2rem, 8vw, 6rem);
+      font-weight: 700;
+      letter-spacing: -0.06em;
+      line-height: 1.1;
+    }
+
+    .title-line {
+      width: 54px;
+      height: 3px;
+      margin: 22px auto 0;
+      background: #9a7658;
+      border-radius: 10px;
+    }
+
+    .image-frame {
+      width: 100%;
+      height: 430px;
+      overflow: hidden;
+      border-radius: 8px;
+      background:
+        linear-gradient(135deg, #cbb397, #8c6a50);
+      box-shadow: 0 18px 45px rgba(74, 56, 44, 0.14);
+      position: relative;
+    }
+
+    .bookshop-image {
+      width: 100%;
+      height: 100%;
+      display: block;
+      object-fit: cover;
+      object-position: center;
+      background: #cbb397;
+    }
+
+    .image-frame::after {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(
+        to bottom,
+        rgba(255, 248, 235, 0.04),
+        rgba(61, 39, 25, 0.12)
+      );
+    }
+
+    .introduction {
+      margin: 52px 0 0;
+      padding: 42px 46px;
+      background: rgba(255, 251, 243, 0.78);
+      border: 1px solid rgba(139, 108, 80, 0.16);
+      border-radius: 8px;
+      box-shadow: 0 10px 30px rgba(74, 56, 44, 0.06);
+    }
+
+    .intro-line {
+      margin: 0;
+      padding: 10px 0;
+      color: #5b4738;
+      font-size: 1.04rem;
+      border-bottom: 1px solid rgba(139, 108, 80, 0.12);
+    }
+
+    .intro-line:last-child {
+      border-bottom: none;
+    }
+
+    .information {
+      margin-top: 48px;
+      padding-top: 30px;
+      border-top: 1px solid rgba(107, 78, 56, 0.25);
+      text-align: center;
+    }
+
+    .info-item {
+      margin: 4px 0;
+      color: #6d5848;
+      font-size: 0.94rem;
+    }
+
+    .info-label {
+      display: inline-block;
+      min-width: 48px;
+      margin-right: 6px;
+      color: #513a2b;
+      font-weight: 700;
+    }
+
+    @media (max-width: 700px) {
+      .page {
+        padding: 46px 16px 36px;
+      }
+
+      .title-area {
+        margin-bottom: 30px;
+      }
+
+      .image-frame {
+        height: 300px;
+        border-radius: 6px;
+      }
+
+      .introduction {
+        margin-top: 34px;
+        padding: 28px 22px;
+      }
+
+      .intro-line {
+        padding: 8px 0;
+        font-size: 0.97rem;
+      }
+
+      .information {
+        margin-top: 34px;
+        padding-top: 24px;
+      }
+    }
+
+    @media (max-width: 420px) {
+      .page {
+        padding-left: 13px;
+        padding-right: 13px;
+      }
+
+      .image-frame {
+        height: 240px;
+      }
+
+      .introduction {
+        padding: 22px 18px;
+      }
+
+      .intro-line {
+        font-size: 0.92rem;
+        line-height: 1.7;
+      }
+
+      .info-item {
+        font-size: 0.88rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main class="page">
+    <div class="container">
+
+      <header class="title-area">
+        <h1 class="title">책장마켓</h1>
+        <div class="title-line" aria-hidden="true"></div>
+      </header>
+
+      <section class="image-frame" aria-label="책장마켓 대표 이미지">
+        <img
+          class="bookshop-image"
+          src="https://images.unsplash.com/photo-1526243741027-444d633d7365?auto=format&fit=crop&w=1400&q=85"
+          alt="따뜻한 분위기의 오래된 책과 책장이 있는 서점"
+          onerror="this.style.display='none';"
+        >
+      </section>
+
+      <section class="introduction" aria-label="책장마켓 소개">
+        <p class="intro-line">책장마켓은 책을 좋아하는 사람들이 편안하게 머물 수 있는 따뜻한 동네 책방입니다.</p>
+        <p class="intro-line">다양한 분야의 중고서적을 정성스럽게 살펴보고 새로운 주인을 기다리는 책을 소개합니다.</p>
+        <p class="intro-line">한때 누군가의 소중한 책장이었던 책들이 이곳에서 다시 새로운 이야기를 시작합니다.</p>
+        <p class="intro-line">책장 사이를 천천히 둘러보며 예상하지 못했던 좋은 책을 발견하는 즐거움을 느껴보세요.</p>
+        <p class="intro-line">새 책과는 다른 시간의 흔적이 남아 있는 중고책만의 매력을 만날 수 있습니다.</p>
+        <p class="intro-line">합리적인 가격으로 좋은 책을 만날 수 있도록 책 한 권 한 권을 세심하게 준비합니다.</p>
+        <p class="intro-line">누구나 부담 없이 방문하여 책장을 천천히 살펴볼 수 있는 편안한 공간을 지향합니다.</p>
+        <p class="intro-line">소설부터 인문학, 자기계발, 여행, 예술까지 다양한 책들이 새로운 만남을 기다리고 있습니다.</p>
+        <p class="intro-line">오래된 책의 낡은 표지와 종이 냄새 속에서 특별한 추억과 이야기를 발견할 수도 있습니다.</p>
+        <p class="intro-line">책을 고르는 순간만큼은 바쁜 일상에서 잠시 벗어나 여유로운 시간을 가져보시길 바랍니다.</p>
+        <p class="intro-line">책장마켓은 책을 사고파는 공간을 넘어 책과 사람이 만나는 작은 문화 공간입니다.</p>
+        <p class="intro-line">읽고 난 책이 다시 다른 독자를 만나도록 책의 가치를 자연스럽게 이어가고 있습니다.</p>
+        <p class="intro-line">한 권의 책이 여러 사람의 삶을 지나며 새로운 의미를 만들어가는 과정을 소중하게 생각합니다.</p>
+        <p class="intro-line">책을 찾으러 온 분들에게는 뜻밖의 발견을, 책을 사랑하는 분들에게는 편안한 휴식을 선물하고 싶습니다.</p>
+        <p class="intro-line">조용히 책을 살펴보고 마음에 드는 책을 천천히 선택할 수 있는 분위기를 만들어가고 있습니다.</p>
+        <p class="intro-line">오늘의 작은 발견이 오래 기억되는 독서의 시작이 될 수 있도록 정성껏 책장을 채워갑니다.</p>
+        <p class="intro-line">누군가에게는 추억이었던 책이 또 다른 누군가에게는 새로운 지식과 즐거움이 되기를 바랍니다.</p>
+        <p class="intro-line">책을 사랑하는 모든 분들이 부담 없이 찾아와 자신만의 책을 발견하기를 기대합니다.</p>
+        <p class="intro-line">천천히 둘러보고, 마음에 드는 책을 만나고, 책과 함께 잠시 쉬어가는 시간을 가져보세요.</p>
+        <p class="intro-line">책장마켓은 좋은 책의 새로운 여행을 함께하며 오래도록 따뜻한 책방으로 기억되고 싶습니다.</p>
+      </section>
+
+      <footer class="information">
+        <p class="info-item">
+          <span class="info-label">주소</span>
+          서울특별시 책방구 책장로 123, 책장마켓
+        </p>
+        <p class="info-item">
+          <span class="info-label">전화</span>
+          02-1234-5678
+        </p>
+        <p class="info-item">
+          <span class="info-label">대표</span>
+          김책장
+        </p>
+      </footer>
+
+    </div>
+  </main>
+
+  <script>
+    // 정적인 소개 페이지이므로 별도의 동작은 사용하지 않습니다.
+  </script>
+</body>
+</html>
